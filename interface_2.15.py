@@ -579,7 +579,7 @@ with aba4:
                 st.subheader('')
                 st.subheader('')
                 st.subheader(
-                    f":abacus:ÔNUS - Termo {st.session_state.inp_TermoOnus}/{str(st.session_state.inp_AnoOnus).split('.')[0]}")
+                    f" ÔNUS - Termo {st.session_state.inp_TermoOnus}/{str(st.session_state.inp_AnoOnus).split('.')[0]}")
             
             with colC:  # Executa a rotina de cálculo do ônus por meio da função calculaOnus
                 
