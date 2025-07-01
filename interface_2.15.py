@@ -595,11 +595,9 @@ with aba4:
                 st.subheader('')
                 st.subheader('R$ {:.2f}'.format(onus))
                 st.subheader('')
-                # st.subheader(PopulacaoTotal)
-                
+                st.subheader(PopulacaoTotal)
+    
 
-               
-        
         df_tabelaTermosAbaOnus = st.session_state.df_TermosPrg
         df_tabelaTermosAbaOnusAnoBase = df_tabelaTermosAbaOnus[df_tabelaTermosAbaOnus['AnoBase'] == st.session_state.anoBasePop]
         df_tabelaTermosAbaOnusAnoBaseUF = df_tabelaTermosAbaOnusAnoBase[df_tabelaTermosAbaOnusAnoBase['UF'] == st.session_state.anoBaseUF]
