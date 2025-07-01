@@ -152,11 +152,13 @@ def calculaOnus(AnoBasePop, Entidade, UF, NumTermo, AnoTermo, ROL_UF, dfDadosOnu
         
         numFatorpopulacional = dfTermoOnus[dfTermoOnus['codMun'] == codMunOnus]['popMun'].unique()
         FatorPopulacional = numFatorpopulacional/popTotalPrest
-        # print(FatorPopulacional)
-        NumeradorFreq = dfTermoOnus[dfTermoOnus['codMun'] == codMunOnus]['BW_Freq'].unique().sum()
-        
-        DenominadorFreq = NumeradorFreq + dfTermoOutros[dfTermoOutros['codMun'] == codMunOnus][
-            'BW_Freq'].unique().sum()
+
+        # cálculo do fator de frequência
+
+        NumeradorFreq = np.array(list(dfTermoOnus[dfTermoOnus['codMun'] == codMunOnus]['BW_Freq'])).sum()
+
+        DenominadorFreq = NumeradorFreq + np.array(list(dfTermoOutros[dfTermoOutros['codMun'] == codMunOnus]['BW_Freq'])).sum()
+       
         FatorFreq = NumeradorFreq / DenominadorFreq
 
         onusPorMunicipio = FatorFreq * FatorPopulacional * 0.02 * ROL_UF
