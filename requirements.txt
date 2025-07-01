@@ -1,8 +1,8 @@
 altair
-numpy
+numpy>=1.25.0
 pandas
 pydeck
-streamlit>=1.35
+streamlit>=1.45.0
 folium
 geopandas
 streamlit_folium
