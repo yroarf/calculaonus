@@ -172,7 +172,7 @@ def calculaOnus(AnoBasePop, Entidade, UF, NumTermo, AnoTermo, ROL_UF, dfDadosOnu
                                 'onusMunicipio':onusPorMunicipio})
         dfFatorFreqMun = pd.concat([dfFatorFreqMun, dfFFAux])
 
-    return resultadoOnusUF, dfFatorFreqMun, popTotalPrest
+    return resultadoOnusUF[0], dfFatorFreqMun, popTotalPrest
 
 
 ## inicia o dataframe para carregamento dos termos
