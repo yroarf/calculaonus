@@ -5,6 +5,7 @@ import locale
 import geopandas as gpd
 from streamlit_folium import st_folium
 import datetime as dt
+import numpy as np
 
 st.set_page_config(layout='wide')
 pd.options.mode.copy_on_write = True
