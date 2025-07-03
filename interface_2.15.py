@@ -163,7 +163,7 @@ def calculaOnus(AnoBasePop, Entidade, UF, NumTermo, AnoTermo, ROL_UF, dfDadosOnu
 
         onusPorMunicipio = FatorFreq * FatorPopulacional * 0.02 * ROL_UF
         
-        resultadoOnusUF = resultadoOnusUF + (onusPorMunicipio)
+        resultadoOnusUF = resultadoOnusUF + onusPorMunicipio
         
         nomeMun = dfTermoOnus[dfTermoOnus['codMun'] == codMunOnus]['Municipio'].unique()
         
